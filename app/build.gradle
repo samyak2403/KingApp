@@ -1,0 +1,106 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+}
+
+
+android {
+    namespace 'com.samgames.storyapp'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.samgames.storyapp"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    // Add lint configuration
+    lint {
+        // Continue build even if lint finds errors
+        checkReleaseBuilds false
+        
+        // Or if you want to fail on errors
+        // abortOnError false
+        
+        // Disable specific lint checks if needed
+        disable 'InvalidPackage', 
+                'GoogleAppIndexingWarning', 
+                'MissingTranslation', 
+                'UnusedResources'
+        
+        // Specify lint config file if you have a custom one
+        // lintConfig file("lint.xml")
+        
+        // Enable specific checks
+        enable 'RtlHardcoded', 
+               'RtlCompat', 
+               'DefaultLocale'
+        
+        // Treat certain warnings as errors
+        warningsAsErrors true
+        
+        // Specify checks to run
+        checkOnly 'NewApi', 'LogConditional', 'StringFormatMatches'
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    implementation ("com.airbnb.android:lottie:4.2.2")
+
+    // Add Unity Ads dependency
+    implementation 'com.unity3d.ads:unity-ads:4.8.0'
+
+    // Add CircleImageView dependency
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    
+    // Add Glide dependency for image loading
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+
+    // Add AppUpdater library dependency for GitHub update feature
+  
+    
+    // Ensure all dependencies use AndroidX
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    
+    configurations.all {
+        exclude group: 'com.android.support', module: 'support-compat'
+        exclude group: 'com.android.support', module: 'support-core-utils'
+        exclude group: 'com.android.support', module: 'support-core-ui'
+        exclude group: 'com.android.support', module: 'support-fragment'
+    }
+}

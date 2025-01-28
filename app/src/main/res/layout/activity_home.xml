@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_sky"
+        android:layout_width="wrap_content"
+        android:layout_height="231dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sky" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/man"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/your_name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/check"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name"
+        app:layout_constraintStart_toEndOf="@+id/user_name"
+        app:layout_constraintTop_toTopOf="@+id/user_name" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_name">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showInterstitialAdsBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/splash_text"
+            android:enabled="false"
+            android:text="Planet Info"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showRewardedAdsBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/splash_text"
+            android:enabled="false"
+            android:text="GAME"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_mars"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+
+
+        app:layout_constraintBottom_toBottomOf="@id/withdrawalLimitText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.137"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/venus" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_line"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/checkUpdateButton"
+        app:layout_constraintEnd_toEndOf="@+id/splash_mars"
+        app:layout_constraintStart_toStartOf="@+id/splash_mars"
+        app:layout_constraintTop_toTopOf="@+id/splash_mars"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/satellite" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_line"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/checkUpdateButton"
+        app:layout_constraintEnd_toEndOf="@+id/checkUpdateButton"
+        app:layout_constraintStart_toStartOf="@+id/checkUpdateButton"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sos" />
+
+
+    <Button
+        android:id="@+id/checkUpdateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/splash_text"
+        android:text="Check for Updates"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/withdrawalLimitText"
+        app:layout_constraintEnd_toStartOf="@+id/splash_moom_man"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splash_mars"
+        app:layout_constraintVertical_bias="0.488" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_moom_man"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+
+        android:layout_marginBottom="5dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/withdrawalLimitText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/moon" />
+
+
+    <TextView
+        android:id="@+id/withdrawalLimitText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Minimum Withdrawal: $100 | Payouts via Bank Transfer | Based on Invoiced Earnings"
+
+        android:textColor="@color/cool_pink"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/unityAdsLimitationText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/unityAdsLimitationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Reward Ads: 100% Completion Required | No Partial Rewards | Subject to Network &amp; Server Conditions"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

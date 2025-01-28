@@ -1,0 +1,10 @@
+{
+  "name": "Meteor",
+  "type": "space_object",
+  "properties": {
+    "size": "medium",
+    "speed": 50,
+    "damage": 25,
+    "trajectory": "random"
+  }
+}

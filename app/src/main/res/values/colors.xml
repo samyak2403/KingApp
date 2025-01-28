@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_color">#333333</color>
+
+    <color name="background_color">#121212</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="hint_color">#CCCCCC</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="button_color">#6200EA</color>
+    <color name="button_color_pressed">#3700B3</color>
+    <color name="background_colors">#CED7DB</color>
+
+
+
+
+    <!--    custom colors-->
+    <color name="cool_blue">#0091EA</color>
+    <color name="cool_green">#64DD17</color>
+    <color name="cool_pink">#F50057</color>
+    <color name="yellow">#FFD600</color>
+
+    <color name="primary">#1B023B</color>
+    <color name="secondary">#FF03DAC5</color>
+
+    <color name="fire_red">#FF4D00</color>
+    <color name="fire_orange">#FF7A00</color>
+    <color name="fire_yellow">#FFB700</color>
+
+    <color name="splash_text">#1DB06F</color>
+    <color name="header_text_color">#1DB06F</color>
+    <color name="tab_txt_press">#ffffff</color>
+    <color name="tab_txt_unpress">#1DB06F</color>
+    <color name="main_bg_color">#F9FBFD</color>
+    <color name="thumb_color">#A1A1A2</color>
+    <color name="track_color">#DADCDD</color>
+    <color name="chkbox_color">#ffffff</color>
+    <color name="home_top_start_color">#1DB06F</color>
+    <color name="home_top_end_color">#1DA469</color>
+    <color name="round_btn_bg">#80000000</color>
+    <color name="drawer_unpress">#AFAEAE</color>
+    <color name="drawer_press">#1DB06F</color>
+    <color name="popup_bg">#fff</color>
+    <color name="popup_btn_color">#E6F6ED</color>
+    <color name="btn_icon">#1DB06F</color>
+    <color name="btn_text">#1DB06F</color>
+    <color name="circle_pre">#1DB06F</color>
+    <color name="text_bg_pre">#fff</color>
+    <color name="pre_icon_color">#fff</color>
+    <color name="pre_text_color">#1DB06F</color>
+    <color name="help_text">#1DB06F</color>
+    <color name="text_hint_color">#70BA99</color>
+    <color name="chat_main_txt_color">#000</color>
+    <color name="chat_sub_txt_color">#8D9CA6</color>
+    <color name="user_chat_main_txt_color">#000</color>
+    <color name="user_chat_sub_txt_color">#8D9CA6</color>
+
+    <!-- Match Status Colors -->
+    <color name="live_match">#4CAF50</color>
+    <color name="completed_match">#2196F3</color>
+    <color name="upcoming_match">#FF9800</color>
+
+    <color name="power_blue">#2196F3</color>  <!-- Vibrant blue for power indicator -->
+
+</resources>
