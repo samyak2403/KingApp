@@ -1,0 +1,20 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background Color -->
+    <solid android:color="#121212"/>
+
+    <!-- Rounded Corners -->
+    <corners android:radius="12dp"/>
+
+    <!-- Padding for Better Spacing -->
+    <padding android:left="20dp" android:top="12dp" android:right="20dp" android:bottom="12dp"/>
+
+    <!-- Border/Stroke for a Premium Look -->
+    <stroke android:width="2dp" android:color="#FF9800"/>
+
+    <!-- Gradient Effect -->
+    <gradient
+        android:angle="270"
+        android:startColor="@android:color/transparent"
+        android:endColor="@android:color/transparent"
+        android:type="linear"/>
+</shape>
